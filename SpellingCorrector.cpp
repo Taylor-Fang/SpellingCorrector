@@ -167,19 +167,19 @@ void correct(string & word,Dictionary & dict)
 			struct node
 			{
 				int max;
-				string sss;
+				string str;
 			};
 			node right;
 			s_str::iterator in;
-			for(in = s1.begin(),right.sss=*in,right.max=dict[*in];in != s1.end();in++)
+			for(in = s1.begin(),right.str=*in,right.max=dict[*in];in != s1.end();in++)
 			{
 				if(dict[*in] > right.max)
 				{
 					right.max=dict[*in];
-					right.sss = *in;
+					right.str = *in;
 				}
 			}
-			cout<<right.sss<<endl;
+			cout<<right.str<<endl;
 		}
 		else
 		{
@@ -190,19 +190,19 @@ void correct(string & word,Dictionary & dict)
 			struct node
 			{
 				int max;
-				string sss;
+				string str;
 			};
-			node x;
-			s_str::iterator xx;
-			for(xx = edit2_substr.begin(),x.sss=*xx,x.max=dict[*xx];xx != edit2_substr.end();xx++)
+			node correct;
+			s_str::iterator iter;
+			for(iter = edit2_substr.begin(),correct.str=*iter,correct.max=dict[*iter];iter != edit2_substr.end();iter++)
 			{
-				if(dict[*xx] > x.max)
+				if(dict[*iter] > correct.max)
 				{
-					x.max=dict[*xx];
-					x.sss = *xx;
+					correct.max=dict[*iter];
+					correct.str = *iter;
 				}
 			}
-			cout<<x.sss<<endl;
+			cout<<correct.str<<endl;
 		}
 		else
 			cout<<word<<endl;
